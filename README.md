@@ -1,59 +1,163 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📚 Application de Gestion de Scolarité
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🧾 Description
 
-## About Laravel
+Cette application est une plateforme web développée avec **Laravel**, permettant de gérer efficacement un établissement scolaire.
+Elle intègre des fonctionnalités modernes grâce à **Livewire** pour une interface dynamique sans rechargement et **Jetstream** pour une authentification sécurisée.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+L'application permet de gérer les élèves, classes, niveaux et années scolaires (school years) de manière simple, rapide et organisée.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📸 Aperçu
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Gestion de Scolarité - Interface Dashboard](./public/storage/Db_gestion_scolaire.png)
 
-## Learning Laravel
+## 🎯 Objectifs
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- Centraliser les données scolaires
+- Simplifier la gestion administrative
+- Structurer les informations par niveaux et années
+- Offrir une interface moderne et interactive sans JavaScript complexe
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚙️ Fonctionnalités principales
 
-## Laravel Sponsors
+### 👨‍🎓 Gestion des élèves
+- Ajouter / modifier / supprimer un élève
+- Assigner un élève à une classe
+- Recherche dynamique avec Livewire
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🏫 Gestion des classes
+- Création et gestion des classes
+- Association avec les niveaux
+- Liste dynamique des élèves par classe
 
-### Premium Partners
+### 📊 Gestion des niveaux
+- Création des niveaux (6ème, 5ème, etc.)
+- Organisation hiérarchique des classes
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 📅 Gestion des années scolaires (School Years)
+- Création d'années scolaires
+- Définir une année active
+- Filtrage des données par année
 
-## Contributing
+## 🧱 Technologies utilisées
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Backend** : Laravel
+- **Frontend** : Blade + Livewire
+- **Authentification** : Jetstream
+- **Base de données** : MySQL / PostgreSQL
+- **UI** : Tailwind CSS
 
-## Code of Conduct
+## 🔐 Authentification avec Jetstream
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+L'application utilise Jetstream pour :
 
-## Security Vulnerabilities
+- Inscription / Connexion sécurisée
+- Gestion des sessions
+- Vérification email
+- Gestion des profils utilisateurs
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## ⚡ Dynamisme avec Livewire
 
-## License
+Grâce à Livewire, l'application offre :
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Recherche en temps réel 🔍
+- Pagination dynamique
+- Formulaires interactifs sans rechargement
+- Expérience utilisateur fluide
+
+## 📁 Structure du projet
+
+```
+app/
+ ├── Models/
+ │    ├── Student.php
+ │    ├── Classes.php
+ │    ├── Level.php
+ │    └── SchoolYear.php
+ │
+ ├── Http/
+ │    ├── Controllers/
+ │    └── Livewire/
+ │         ├── CreateStudents.php
+ │         ├── EditStudent.php
+ │         ├── StudentList.php
+ │         ├── CreateClasses.php
+ │         ├── EditClasse.php
+ │         ├── Classe.php
+ │         ├── CreateLevel.php
+ │         ├── EditLevel.php
+ │         ├── ListNiveaux.php
+ │         ├── CreateSchoolYear.php
+ │         └── Settings.php
+ │
+database/
+ ├── migrations/
+ └── seeders/
+
+resources/
+ ├── views/
+ │    ├── livewire/
+ │    ├── layouts/
+ │    ├── classes/
+ │    ├── niveaux/
+ │    ├── settings/
+ │    ├── students/
+ │    └── components/
+```
+
+## 🚀 Installation
+
+1. **Cloner le repository**
+   ```bash
+   git clone <url-du-repo>
+   cd Gestion_scolarite_v1
+   ```
+
+2. **Installer les dépendances PHP**
+   ```bash
+   composer install
+   ```
+
+3. **Installer les dépendances Node.js**
+   ```bash
+   npm install
+   ```
+
+4. **Configuration**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+5. **Base de données**
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
+
+6. **Compiler les assets**
+   ```bash
+   npm run build
+   ```
+
+7. **Lancer le serveur**
+   ```bash
+   php artisan serve
+   ```
+
+L'application sera accessible à `http://127.0.0.1:8000`
+
+## 📝 Notes de développement
+
+- Tous les composants Livewire sont dans `app/Livewire/`
+- Les migrations sont dans `database/migrations/`
+- Les vues Blade sont organisées par module dans `resources/views/`
+- Les styles Tailwind sont configurés dans `tailwind.config.js`
+
+## 🤝 Contribuer
+
+Les contributions sont bienvenues ! N'hésitez pas à créer une pull request.
+
+## 📄 Licence
+
+Ce projet est sous licence MIT.
