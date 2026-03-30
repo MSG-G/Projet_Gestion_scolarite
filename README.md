@@ -9,7 +9,7 @@ L'application permet de gérer les élèves, classes, niveaux et années scolair
 
 ## 📸 Aperçu
 
-![Gestion de Scolarité - Interface Dashboard](./public/storage/Db_gestion_scolaire.png)
+![Gestion de Scolarité - Interface Dashboard](./public/Db_gestion_scolaire.png)
 
 ## 🎯 Objectifs
 
